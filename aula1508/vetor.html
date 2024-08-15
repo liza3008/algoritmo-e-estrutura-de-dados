@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let alunos = [];
+        function lerDadosAluno() {
+            let nome = prompt("Digite o nome do aluno:");
+            let faltas = parseInt(prompt("Digite o numero de faltas do aluno:"));
+            let media = parseFloat(prompt("Digite o a media do aluno:"));
+
+            let aluno = {
+                nome: nome,
+                faltas: faltas,
+                media: media
+            };
+
+            alunos.push(aluno);
+
+        }
+
+        for (let i = 0; i < 4; i++) {
+            lerDadosAluno();
+        }
+
+        window.alert("Listagem dos alunos:");
+        for (let aluno of alunos) {
+            window.alert(`Nome:${aluno.nome}, Faltas: ${aluno.faltas}, Média:${aluno.media}`);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
